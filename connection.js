@@ -3,11 +3,6 @@ const sql = require('mssql')
 sql.Promise = require('bluebird')
 const express = require('express')
 const app = express()
-
-const appConfig = {
-  port: 9999
-}
-
 const sqlConfig = {
   user: 'dometrics-etl',
   password: 'gHfmpF6d3uMFaF6',
@@ -122,12 +117,11 @@ AND a.alloc_purpose = p.purpose_code
 AND a.is_active = 1
 `
 
-// Initialize app, listening on port stated in config
-app.listen(appConfig.port, function () {
-  console.log(`API listening on port ${appConfig.port}`)
+
+app.listen(9999, function () {
+  console.log('API listening on port 9999!')
 })
 
-// GET request endpoint
 app.get('/allocations', (req, res) => {
   sql.connect(sqlConfig)
   .then(()=> {
@@ -142,7 +136,8 @@ app.get('/allocations', (req, res) => {
   .catch(err => console.dir(err))
 })
 
-// Generic function to make a simple request given a passed in query
+
+
 function makeRequest(query) {
   return new Promise( (resolve, reject) => {
     new sql.Request().query(query)
