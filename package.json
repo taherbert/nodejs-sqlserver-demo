@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-sqlserver-demo",
+  "version": "1.0.0",
+  "description": "Demonstration of connecting to Azure DB with Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taherbert/nodejs-sqlserver-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taherbert/nodejs-sqlserver-demo/issues"
+  },
+  "homepage": "https://github.com/taherbert/nodejs-sqlserver-demo#readme",
+  "dependencies": {
+    "mssql": "^3.3.0",
+    "tedious": "^1.15.0"
+  }
+}
