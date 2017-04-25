@@ -8,8 +8,8 @@ const app = express()
 // Database configuration
 const sqlConfig = {
   user: 'dometrics-etl',
-  password: 'gHfmpF6d3uMFaF6',
-  server: 'Devs-ais-etl.ou.ad3.ucdavis.edu',
+  password: 'thisisnotthepwyourelookingfor',
+  server: 'etl',
   database: 'ETL_Core',
   options: { encrypt: true }
 }
